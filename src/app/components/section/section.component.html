@@ -1,10 +1,13 @@
-<div class="section-container" fxLayout="column" fxLayout.gt-sm="row">
+<div class="section-container" fxLayout="column" fxLayout.gt-sm="row"
+[style.background-image]="'url(' + divBg + ')'">
   <section class="section is-medium">
     <h1 class="title">{{ title }}</h1>
     <h2 class="subtitle">
       {{ subtitle }}
     </h2>
   </section>
-  <div class="content"></div>
+  <div class="container" fxFlex.gt-sm="33%" fxFlex="100%">
+    <ng-content></ng-content>
+  </div>
 
 </div>

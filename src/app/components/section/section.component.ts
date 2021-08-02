@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SectionComponent implements OnInit {
   @Input() title = ''
   @Input() subtitle = ''
+  @Input() divBg = ''
   constructor() { }
 
   ngOnInit(): void {
