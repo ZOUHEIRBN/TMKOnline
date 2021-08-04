@@ -1,13 +1,16 @@
-<div class="section-container" fxLayout="column" fxLayout.gt-sm="row"
-[style.background-image]="'url(' + divBg + ')'">
-  <section class="section is-medium">
-    <h1 class="title">{{ title }}</h1>
-    <h2 class="subtitle">
-      {{ subtitle }}
-    </h2>
-  </section>
-  <div class="container" fxFlex.gt-sm="33%" fxFlex="100%">
-    <ng-content></ng-content>
+<div [style.background]="divBg !== '' ? 'url(' + divBg + ')': sectionStyle">
+
+
+  <div [class]="sectionStyle !== '' ? sectionStyle : 'section-container'" fxLayout="column" fxLayout.gt-sm="row">
+    <section class="section is-large" *ngIf="title !== '' || subtitle !== ''">
+      <h1 [class]="'title ' + textStyle">{{ title }}</h1>
+      <h2 [class]="'subtitle ' + textStyle">
+        {{ subtitle }}
+      </h2>
+    </section>
+    <div class="container" fxFlex.gt-sm="100%" fxFlex="100%">
+      <ng-content></ng-content>
+    </div>
   </div>
 
 </div>

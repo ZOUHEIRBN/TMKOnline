@@ -1,6 +1,42 @@
-<douz-section [title]="'Medium section'"
+<douz-section [title]="'With bg Image'"
  [divBg]="'https://source.unsplash.com/user/erondu/1600x900'"
  [subtitle]="'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam commodi nihil repellendus placeat consequuntur obcaecati numquam incidunt, in eligendi asperiores maxime nostrum qui consequatur unde!'">
   <img src="https://source.unsplash.com/WLUHO9A_xik/1600x900"/>
 
 </douz-section>
+
+<douz-section>
+
+  <h1>Our Services</h1>
+  <div>
+    <div *ngFor="let item of [1, 2, 3]"></div>
+  </div>
+
+</douz-section>
+
+<douz-section [title]="'Default'"
+ [subtitle]="'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam commodi nihil repellendus placeat consequuntur obcaecati numquam incidunt, in eligendi asperiores maxime nostrum qui consequatur unde!'">
+  <img src="https://source.unsplash.com/WLUHO9A_xik/1600x900"/>
+
+</douz-section>
+
+<douz-section [title]="'Without bg Image/Light'"
+ [sectionStyle]="'primary-light'"
+ [textStyle]="'danger-dark'"
+ [subtitle]="'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam commodi nihil repellendus placeat consequuntur obcaecati numquam incidunt, in eligendi asperiores maxime nostrum qui consequatur unde!'">
+  <img src="https://source.unsplash.com/WLUHO9A_xik/1600x900"/>
+</douz-section>
+
+<douz-section [title]="'Without bg Image'"
+ [sectionStyle]="'primary'"
+ [subtitle]="'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam commodi nihil repellendus placeat consequuntur obcaecati numquam incidunt, in eligendi asperiores maxime nostrum qui consequatur unde!'">
+  <img src="https://source.unsplash.com/WLUHO9A_xik/1600x900"/>
+</douz-section>
+
+<douz-section [title]="'Without bg Image/Dark'"
+ [sectionStyle]="'primary-dark'"
+ [subtitle]="'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam commodi nihil repellendus placeat consequuntur obcaecati numquam incidunt, in eligendi asperiores maxime nostrum qui consequatur unde!'">
+  <img src="https://source.unsplash.com/WLUHO9A_xik/1600x900"/>
+</douz-section>
+
+
