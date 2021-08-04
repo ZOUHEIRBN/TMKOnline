@@ -1,14 +1,15 @@
-<div [style.background]="divBg !== '' ? 'url(' + divBg + ')': sectionStyle">
+<div class="main-container" [@bgInsertIn]="divBg" @fade [style.background]="divBg !== '' ? 'url(' + divBg + ')': sectionStyle">
 
 
-  <div [class]="sectionStyle !== '' ? sectionStyle : 'section-container'" fxLayout="column" fxLayout.gt-sm="row">
-    <section class="section is-large" *ngIf="title !== '' || subtitle !== ''">
-      <h1 [class]="'title ' + textStyle">{{ title }}</h1>
-      <h2 [class]="'subtitle ' + textStyle">
+  <div [class]="sectionStyle !== '' ? sectionStyle : 'section-container'" fxLayout="column" [fxLayout.gt-sm]="orientation === 'rtl' ? 'row-reverse': 'row'">
+    <section class="section is-medium" *ngIf="title !== '' || subtitle !== ''">
+      <h1 @insertR [class]="'title ' + textStyle">{{ title }}</h1>
+      <h2 @insertRDelayed [class]="'subtitle ' + textStyle">
         {{ subtitle }}
       </h2>
     </section>
-    <div class="container" fxFlex.gt-sm="100%" fxFlex="100%">
+     <div @insertL @fade class="sub-container">
+       <!--fxFlex.gt-sm="100%" fxFlex="100%"> -->
       <ng-content></ng-content>
     </div>
   </div>

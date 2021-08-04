@@ -2,3 +2,15 @@
   background-blend-mode: multiply;
   background-color: #00000088;
 }
+.main-container{
+  background-size: 'cover';
+  background-position-x: 0%;
+  background-position-y: 0%;
+}
+.sub-container{
+  padding: 1rem;
+  flex-grow: 1;
+}
+section{
+  flex: 1 1 100%
+}
