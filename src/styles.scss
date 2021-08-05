@@ -2,6 +2,9 @@
 .sub-container{
   display: flex;
   justify-content: center;
+  >*{
+    display: contents;
+  }
   img, video{
     align-self: center;
   }

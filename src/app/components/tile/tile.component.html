@@ -1,0 +1,11 @@
+<div class="tile is-parent is-vertical">
+  <article [class]="tileStyle">
+    <div class="content">
+      <p [class]="'title ' + textStyle">Tall tile</p>
+      <p [class]="'subtitle ' + textStyle">With even more content</p>
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </article>
+</div>

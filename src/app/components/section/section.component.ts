@@ -1,35 +1,12 @@
 import { animate, animateChild, group, query, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
-import { bgInsertIn, fadeIn, insertIn } from 'src/animations';
+import { bgInsertIn, fadeIn, insertIn, sectionAnims } from 'src/animations';
 
 @Component({
   selector: 'douz-section',
   templateUrl: './section.component.html',
   styleUrls: ['./section.component.scss'],
-  animations: [[
-    trigger('fade', fadeIn('1s ease-in')),
-    // trigger('bgInsertIn', bgInsertIn('1s .2s cubic-bezier(.1,.67,.5,.9)', 'top')),
-    trigger('insertR', insertIn('.7s ease-out')),
-    trigger('insertRDelayed', insertIn('.7s .2s ease-out')),
-    trigger('insertL', insertIn('.7s ease-out', 'right')),
-
-
-    trigger('bgInsertIn', [
-      bgInsertIn('1s', 'top')[0],
-      transition('* <=> *', [
-        group([
-          // query('@fade', animateChild()),
-          query('@insertR', animateChild(), { optional: true }),
-          query('@insertRDelayed', animateChild(), { optional: true }),
-          query('@insertL', animateChild(), { optional: true }),
-          animate('1s .1s cubic-bezier(.52, .13, 0, 1.24)'),
-        ]),
-      ]),
-    ]),
-
-
-
-  ]]
+  animations: sectionAnims
 })
 export class SectionComponent implements OnInit {
   @Input() title = ''

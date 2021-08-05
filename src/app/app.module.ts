@@ -7,13 +7,17 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SectionComponent } from './components/section/section.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TilesetComponent } from './components/tileset/tileset.component';
+import { TileComponent } from './components/tile/tile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     ToolbarComponent,
-    SectionComponent
+    SectionComponent,
+    TilesetComponent,
+    TileComponent
   ],
   imports: [
     BrowserModule,
