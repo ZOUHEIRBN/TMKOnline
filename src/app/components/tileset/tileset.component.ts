@@ -1,6 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { fadeIn, insertIn } from 'src/animations';
+import { fadeIn, insertIn } from 'src/scripts/animations';
 
 @Component({
   selector: 'douz-tileset',

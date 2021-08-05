@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
+  styles: Partial<CSSStyleDeclaration> = {
+    maxWidth: '500px',
+    margin: '0 auto',
+  };
+  options = {
+
+  }
   constructor() { }
+
 
   ngOnInit(): void {
   }

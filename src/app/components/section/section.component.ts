@@ -1,6 +1,6 @@
 import { animate, animateChild, group, query, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
-import { bgInsertIn, fadeIn, insertIn, sectionAnims } from 'src/animations';
+import { bgInsertIn, fadeIn, insertIn, sectionAnims } from 'src/scripts/animations';
 
 @Component({
   selector: 'douz-section',

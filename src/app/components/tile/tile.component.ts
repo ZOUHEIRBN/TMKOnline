@@ -1,6 +1,6 @@
 import { trigger, transition, query, animateChild, animate, group } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
-import { fadeIn, insertIn, bgInsertIn } from 'src/animations';
+import { fadeIn, insertIn, bgInsertIn } from 'src/scripts/animations';
 
 @Component({
   selector: 'douz-tile',
