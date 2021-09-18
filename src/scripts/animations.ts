@@ -78,12 +78,15 @@ export function insertIn(duration, direction='left', offset='50vmin'){
 export const sectionAnims = [[
   trigger('fade', fadeIn('1s ease-in')),
   // trigger('bgInsertIn', bgInsertIn('1s .2s cubic-bezier(.1,.67,.5,.9)', 'top')),
-  trigger('insertR', insertIn('.7s ease-out')),
-  trigger('insertRDelayed', insertIn('.7s .2s ease-out')),
-  trigger('insertL', insertIn('.7s ease-out', 'right')),
-  trigger('insertB', insertIn('.7s ease-out', 'bottom')),
-  trigger('insertT', insertIn('.7s ease-out', 'top')),
+  trigger('insertR', insertIn('.7s cubic-bezier(.1,.67,.5,.9)')),
+  trigger('insertRDelayed', insertIn('.7s .2s cubic-bezier(.1,.67,.5,.9)', 'left', '10%')),
+  trigger('insertL', insertIn('.7s cubic-bezier(.1,.67,.5,.9)', 'right')),
+  trigger('insertLDelayed', insertIn('.5s .7s cubic-bezier(.1,.67,.5,.9)', 'left', '10%')),
 
+  trigger('insertB', insertIn('.7s cubic-bezier(.1,.67,.5,.9)', 'bottom')),
+  trigger('insertT', insertIn('.7s cubic-bezier(.1,.67,.5,.9)', 'top')),
+
+  // trigger('insertLDelayed', insertIn('.5s .7s cubic-bezier(.1,.67,.5,.9)', 'left', '10%')),
 
   trigger('bgInsertIn', [
     bgInsertIn('1s', 'top')[0],

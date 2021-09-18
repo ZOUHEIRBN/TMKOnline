@@ -13,7 +13,25 @@
 
 
 <douz-section sectionStyle="'primary-dark'">
-  <douz-tileset></douz-tileset>
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+
+      <div @fade @insertL class="tile is-vertical">
+        <douz-tile tileStyle="primary-light"></douz-tile>
+        <douz-tile @fade @insertLDelayed tileStyle="primary"></douz-tile>
+      </div>
+
+      <div @fade @insertB class="tile">
+        <douz-tile tileStyle="warning"></douz-tile>
+      </div>
+
+    </div>
+
+    <div @fade @insertT class="tile">
+      <douz-tile tileStyle="link-dark"></douz-tile>
+    </div>
+
+  </div>
 </douz-section>
 
 
